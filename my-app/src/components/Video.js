@@ -1,10 +1,9 @@
 import './Video.css';
-
-function Video({ title, channel="Shashi Coding", views, time, randomNumber, verified }) {
+function Video({ title, channel = "Shashi Coding", views, time, randomNumber, verified, children }) {
     let topic = title;
     let imgValue = Math.floor(randomNumber);
     //console.log(imgValue);
-    
+
     return (<>
         <div className='container'>
             <div className="pic"><img
@@ -17,6 +16,9 @@ function Video({ title, channel="Shashi Coding", views, time, randomNumber, veri
             <div className="views">
                 {views} views <span>.</span> {time}
             </div>
+            <div>{children}</div>
+
+
         </div>
 
 
